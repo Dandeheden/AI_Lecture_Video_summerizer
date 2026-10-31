@@ -1,0 +1,7 @@
+lecture_id,title,method,time_sec,rouge1_f1,rouge1_p,rouge1_r,rouge2_f1,rouge2_p,rouge2_r,rougel_f1,rougel_p,rougel_r
+lecture_01_cnn,Convolutional Neural Networks and Spatial Invariance,Single-Pass Direct,0.0015,0.2391,0.2973,0.2,0.0667,0.0833,0.0556,0.1739,0.2162,0.1455
+lecture_01_cnn,Convolutional Neural Networks and Spatial Invariance,Hierarchical Chunk-Based,27.985,0.3107,0.3333,0.2909,0.099,0.1064,0.0926,0.2136,0.2292,0.2
+lecture_02_transformers,The Transformer Architecture and Self-Attention Mechanism,Single-Pass Direct,0.0006,0.3636,0.4737,0.2951,0.0825,0.1081,0.0667,0.2626,0.3421,0.2131
+lecture_02_transformers,The Transformer Architecture and Self-Attention Mechanism,Hierarchical Chunk-Based,0.015,0.359,0.375,0.3443,0.1043,0.1091,0.1,0.2735,0.2857,0.2623
+lecture_03_optimization,"Gradient Descent, Learning Rates, and Adam Optimizer",Single-Pass Direct,0.0007,0.1609,0.2059,0.1321,0.0,0.0,0.0,0.1149,0.1471,0.0943
+lecture_03_optimization,"Gradient Descent, Learning Rates, and Adam Optimizer",Hierarchical Chunk-Based,0.0119,0.1852,0.1818,0.1887,0.0189,0.0185,0.0192,0.1481,0.1455,0.1509

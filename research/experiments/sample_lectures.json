@@ -1,0 +1,59 @@
+[
+  {
+    "id": "lecture_01_cnn",
+    "course": "Deep Learning (CS482)",
+    "title": "Convolutional Neural Networks and Spatial Invariance",
+    "transcript": "Welcome back everyone. Today we are discussing Convolutional Neural Networks, commonly abbreviated as CNNs. In classical fully connected networks, high-dimensional input vectors like images lead to parameter explosion. A Convolutional Layer is an architectural mechanism that applies discrete sliding kernels across the spatial dimensions of an input tensor. The primary advantage of this operation is weight sharing and translation invariance. When a filter detects an edge or a corner in the upper left of an image, the same shared weights can recognize the identical feature elsewhere. Following each convolution, we typically apply a non-linear activation function such as ReLU, which is the Rectified Linear Unit defined as max(0, x). Pooling layers, such as max pooling, are then applied to downsample spatial resolution, thereby reducing computational complexity and controlling overfitting. Finally, one or more fully connected dense layers synthesize these high-level feature maps into categorical classification probabilities through the softmax function. In our next lecture, we will examine residual connections and backpropagation in deep ResNet models.",
+    "reference_summary": "Convolutional Neural Networks (CNNs) process spatial data such as images by employing convolutional layers with shared weights and translation invariance. The architecture utilizes discrete sliding kernels, ReLU activation functions to introduce non-linearity, and pooling layers to reduce dimensionality and mitigate overfitting. High-level feature representations are finally classified via dense layers and softmax activation.",
+    "reference_questions": [
+      {
+        "question": "What is the primary architectural advantage of weight sharing in Convolutional Layers?",
+        "options": [
+          "It enables translation invariance while preventing parameter explosion",
+          "It forces all weights to remain zero during backpropagation",
+          "It eliminates the necessity for non-linear activation functions",
+          "It restricts input tensors to strictly one-dimensional vectors"
+        ],
+        "correct_answer": "It enables translation invariance while preventing parameter explosion"
+      }
+    ]
+  },
+  {
+    "id": "lecture_02_transformers",
+    "course": "Natural Language Processing (CS584)",
+    "title": "The Transformer Architecture and Self-Attention Mechanism",
+    "transcript": "In this lecture, we explore the Transformer architecture, introduced in the seminal paper Attention Is All You Need. Prior to Transformers, recurrent neural networks like LSTMs suffered from sequential bottlenecking, where computing hidden state h_t required strictly waiting for state h_t-1. Self-Attention is defined as a mechanism that computes pairwise compatibility between queries and keys to calculate attention weight coefficients. The query, key, and value vectors are computed by linear projections: Q = X W_q, K = X W_k, and V = X W_v. Scaled dot-product attention scales the dot product of Q and K by the square root of the head dimension d_k to prevent gradients from vanishing into regions with extremely small gradients in the softmax. Multi-head attention allows the model to jointly attend to information from different representation subspaces at different positions. Positional encodings are added to token embeddings to inject sequence order, since self-attention itself is permutation invariant. Layer normalization and residual skip connections are critical for stabilizing backpropagation across dozens of stacked transformer encoder-decoder layers.",
+    "reference_summary": "Transformers supersede recurrent networks by dispensing with sequential dependencies through the Self-Attention mechanism. Queries, keys, and values are linearly projected to compute scaled dot-product attention weights, normalized by the square root of the head dimension to maintain stable gradients. Multi-head attention enables cross-subspace feature representations, while positional encodings provide sequence order to an otherwise permutation-invariant architecture.",
+    "reference_questions": [
+      {
+        "question": "Why is the dot-product of queries and keys scaled by the square root of d_k in Scaled Dot-Product Attention?",
+        "options": [
+          "To prevent dot products from growing excessively large and causing vanishing gradients in softmax",
+          "To convert token embeddings into discrete integers before tokenization",
+          "To enforce sequential temporal recurrence between adjacent token steps",
+          "To ensure the attention matrix has zero determinant"
+        ],
+        "correct_answer": "To prevent dot products from growing excessively large and causing vanishing gradients in softmax"
+      }
+    ]
+  },
+  {
+    "id": "lecture_03_optimization",
+    "course": "Machine Learning Foundations (CS401)",
+    "title": "Gradient Descent, Learning Rates, and Adam Optimizer",
+    "transcript": "Today we cover loss optimization in high-dimensional parameter spaces. Gradient Descent is defined as an iterative first-order optimization algorithm for finding a local minimum of a differentiable objective function. In standard batch gradient descent, gradients are computed over the entire training set, which is computationally prohibitive for massive datasets. Stochastic Gradient Descent, or SGD, evaluates gradients on single random samples or mini-batches, introducing stochastic noise that helps escape saddle points. However, SGD can oscillate severely in ravines where the surface curves much more steeply in one dimension than in another. Momentum addresses this by accumulating an exponentially decaying moving average of past gradients. The Adam optimizer, which stands for Adaptive Moment Estimation, combines the advantages of Momentum and RMSProp. It maintains exponentially decaying averages of both past gradients (the first raw moment) and past squared gradients (the second uncentered moment). Bias correction terms are applied to counteract initialization bias toward zero during early training steps.",
+    "reference_summary": "Gradient Descent minimizes loss functions by updating parameters iteratively opposite to the objective gradient. Stochastic Gradient Descent introduces mini-batch approximations to increase scalability and navigate saddle points. Momentum stabilizes trajectories in high-curvature dimensions, while the Adam optimizer synergizes momentum and RMSProp by tracking adaptive first and second moments with bias correction.",
+    "reference_questions": [
+      {
+        "question": "What is the primary role of the Adam optimizer in deep neural network training?",
+        "options": [
+          "It combines momentum and adaptive learning rates by tracking first and second gradient moments",
+          "It discards backpropagation in favor of brute-force grid search",
+          "It guarantees convergence to a global minimum for any non-convex objective",
+          "It restricts the parameter updates strictly to integer multiples"
+        ],
+        "correct_answer": "It combines momentum and adaptive learning rates by tracking first and second gradient moments"
+      }
+    ]
+  }
+]

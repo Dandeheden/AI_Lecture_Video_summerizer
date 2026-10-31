@@ -1,0 +1,4 @@
+lecture_id,title,questions_generated,distinct_options_rate,duplicate_rate,grounded_consistency_rate
+lecture_01_cnn,Convolutional Neural Networks and Spatial Invariance,5,1.0,0.0,1.0
+lecture_02_transformers,The Transformer Architecture and Self-Attention Mechanism,5,1.0,0.0,1.0
+lecture_03_optimization,"Gradient Descent, Learning Rates, and Adam Optimizer",5,1.0,0.0,1.0

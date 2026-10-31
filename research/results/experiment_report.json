@@ -1,0 +1,25 @@
+{
+  "experiment_name": "Comparative Evaluation of Lecture Summarization & Grounded Question Generation",
+  "benchmark_dataset": "Educational Lecture Subset (CS482, CS584, CS401)",
+  "sample_count": 3,
+  "summarization_comparison": {
+    "Single-Pass Direct": {
+      "avg_rouge1_f1": 0.2545,
+      "avg_rouge2_f1": 0.0497,
+      "avg_rougel_f1": 0.1838,
+      "avg_latency_sec": 0.0009
+    },
+    "Hierarchical Chunk-Based": {
+      "avg_rouge1_f1": 0.285,
+      "avg_rouge2_f1": 0.0741,
+      "avg_rougel_f1": 0.2117,
+      "avg_latency_sec": 9.3373
+    }
+  },
+  "question_generation_metrics": {
+    "avg_distinct_options_rate": 1.0,
+    "avg_grounded_rate": 1.0,
+    "avg_duplicate_rate": 0.0
+  },
+  "timestamp": "2026-10-29T17:58:24Z"
+}
